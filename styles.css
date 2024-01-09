@@ -55,6 +55,7 @@ header {
 
 .navLinks {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -104,13 +105,14 @@ header {
 
 /* About Page header image and text blocks styles */
 
+.aboutHeaderImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .aboutHeaderImg h1 {
     position: absolute;
-    top: 50%;
-    left:  50%;
-    -webkit-transform: translate(-50%, -50%); /* iOS */
-    transform: translate(-50%, -50%);
     font-size: 9rem;
     font-weight: 600;
     color: #FD5948;
@@ -154,8 +156,6 @@ header {
     background-position: 50% 70%;
     background-size: cover;
     background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: middle;
     width: calc(50% - 100px);
     height: 75%;
     margin-right: 100px;
@@ -166,8 +166,6 @@ header {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: middle;
     width: 30%;
     height: 60%;
 }
@@ -195,9 +193,10 @@ header {
 }
 
 .leftImgContainer2 {
-    display: inline-block;
     position: relative;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 40%;
     height: 80%;
 }
@@ -207,7 +206,6 @@ header {
     background-position: 50% 70%;
     background-size: cover;
     background-repeat: no-repeat;
-    display: block;
     width: 100%;
     height: calc(50% - 50px);
     margin-bottom: 100px;
@@ -218,7 +216,6 @@ header {
     background-position: 50% 70%;
     background-size: cover;
     background-repeat: no-repeat;
-    display: block;
     width: 100%;
     height: calc(50% - 50px);
 }
@@ -229,8 +226,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
     width: calc(50% - 100px);
     height: 70%;
     margin-left: 100px;
@@ -276,11 +271,11 @@ header {
     flex-direction: column;
     flex: 1;
     margin: 0 100px;
+    font-size: 1.5rem;
 }
 
 .careersText h2 {
     padding-bottom: 30px;
-    font-size: 1.5rem;
 }
 
 .careersText a {
@@ -464,12 +459,17 @@ footer {
         font-size: 0.9rem;
         padding: 80px;
     }
+
+    .apprenticeshipContainer {
+        margin-left: 50px;
+    }
+
 }
 
 @media (max-width: 1300px) {
 
     .aboutHeaderImg h1 {
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .aboutHeaderImg,
@@ -477,12 +477,17 @@ footer {
         margin: 0 80px;
     }
 
-    .aboutImgBlock1 {
-        height: 600px;
+    .aboutInfoText {
+        padding: 150px 0;
     }
 
-    .rightImg2 {
-        width: calc(50% - 100px);
+    .aboutImgBlock1 {
+        height: 600px;
+        margin: 0 50px;
+    }
+
+    .aboutImgBlock2 {
+        margin: 0 50px;
     }
 
     .careersInfo {
@@ -520,6 +525,15 @@ footer {
         order: 1;
     }
 
+    .careersText {
+        font-size: 1rem;
+        margin: 90px;
+    }
+
+    .careersText a {
+        font-size: 1.3rem;
+    }
+
     .fineprintLinks {
         align-items: flex-start;
     }
@@ -530,37 +544,104 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    /* .aboutHeaderImg h1 {
-        font-size: 6rem;
-        top: 40%;
+
+    .aboutHeaderImg {
+        margin: 0 50px;
     }
 
-    .aboutImgBlock1 {
-        height: 600px;
+    .aboutHeaderImg h1 {
+        font-size: 5rem;
     }
 
     .aboutInfoText {
-        padding: 100px 0 200px 0;
+        padding: 100px 0;
     }
 
+    .yellowBackgroundBlock {
+        width: 70%;
+    }
+    
     .leftImg1 {
-        height: 80%;
+        width: calc(60% - 50px);
         margin-right: 50px;
     }
 
     .rightImg1 {
-        height: 50%;
+        width: 40%;
     }
-
-    .yellowBackgroundBlock {
-        top: -50px;
-        width: 70%;
-    } */
 
 
     /* second image block small screen styling */
 
     .aboutImgBlock2 {
         height: 600px;
+    }
+
+    .rightImg2 {
+        width: calc(60% - 50px);
+        height: 60%;
+        margin-left: 50px;
+    }
+
+    .leftImgContainer2 {
+        width: 40%;
+    }
+
+    .leftImg2Top {
+        margin-bottom: 50px;
+    }
+
+    .apprenticeshipHeader {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .greenBackgroundBlock {
+        width: 80%;
+    }
+
+    .careersInfo {
+        height: 600px;
+    }
+
+    .careersText {
+        font-size: 0.8rem;
+        margin: 50px;
+    }
+
+    .careersText a {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .aboutImgBlock1,
+    .aboutImgBlock2 {
+        height: 400px;
+        margin: 25px;
+    }
+
+    .aboutBannerImg {
+        margin: 25px;
+    }
+
+    .leftImg2Top {
+        margin-bottom: 30px;
+    }
+
+    .yellowBackgroundBlock {
+        width: 90%;
+    }
+
+    .greenBackgroundBlock {
+        width: 90%;
     }
 }
