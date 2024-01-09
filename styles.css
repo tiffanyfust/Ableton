@@ -62,6 +62,7 @@ header {
 }
 
 .logo {
+    min-width: 40px;
     width: 60px;
     margin: 10px 20px 10px 25px;
 }
@@ -113,7 +114,7 @@ header {
 
 .aboutHeaderImg h1 {
     position: absolute;
-    font-size: 9rem;
+    font-size: 8rem;
     font-weight: 600;
     color: #FD5948;
 }
@@ -271,7 +272,7 @@ header {
     flex-direction: column;
     flex: 1;
     margin: 0 100px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .careersText h2 {
@@ -550,7 +551,7 @@ footer {
     }
 
     .aboutHeaderImg h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .aboutInfoText {
@@ -602,6 +603,10 @@ footer {
 
 @media (max-width: 800px) {
 
+    .aboutHeaderImg h1 {
+        font-size: 3rem;
+    }
+
     .greenBackgroundBlock {
         width: 80%;
     }
@@ -623,10 +628,22 @@ footer {
 
 @media (max-width: 600px) {
 
+    .aboutHeaderImg h1 {
+        font-size: 2.5rem;
+    }
+
     .aboutImgBlock1,
     .aboutImgBlock2 {
         height: 400px;
         margin: 25px;
+    }
+
+    .aboutInfoText h2 {
+        font-size: 1.3rem;
+    }
+
+    .aboutInfoText p {
+        font-size: 1rem;
     }
 
     .aboutBannerImg {
@@ -643,5 +660,9 @@ footer {
 
     .greenBackgroundBlock {
         width: 90%;
+    }
+
+    .apprenticeshipHeader {
+        font-size: 1.3rem;
     }
 }
